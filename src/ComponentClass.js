@@ -3,21 +3,32 @@ import './App.css'
 
 class ComponentClass extends Component {
     state = {
-        activated: false
+        count: 0
     }
 
-    handleClick = (event) => {
-        this.setState({
-            activated: !this.state.activated
-        })
+    componentDidMount() {
+        console.log("This is component did mount")
+    }
+
+    componentDidUpdate() {
+        console.log('this is component did update')
+    }
+
+    componentWillUnmount() {
+        console.log('This is unmount')
     }
 
     render() {
-        const buttonText = this.state.activated ? this.props.active : this.props.inactive
+        console.log('rendering')
+        const { count } = this.state
+
         return (
-            <button onClick={this.handleClick}>
-                {buttonText}
-            </button>
+            <div>
+                <p>This is a standard class component for review</p>
+                <button onClick={() => this.setState({count: count + 1})}>Increase</button>
+                <button onClick={() => this.setState({count: count - 1})}>Decrease</button>
+                <h3>{count}</h3>
+            </div>
         )
     }
 }
