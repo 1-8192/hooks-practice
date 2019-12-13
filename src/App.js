@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import ComponentClass from './ComponentClass.js';
 
 function Box(props) {
   return (
@@ -12,7 +13,10 @@ function Box(props) {
 
 function App() {
   return (
-    <Box text="text from the props" subtitle="Another prop"/>
+    <div>
+      <Box text="text from the props" subtitle="Another prop"/>
+      <ComponentClass active='ON' inactive='OFF'/>
+    </div>
   );
 }
 
