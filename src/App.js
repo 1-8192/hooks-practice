@@ -7,11 +7,15 @@ function App() {
   const [count, setCount] = useState(0)
 
   //onclick is calling the update function declared for the hooks
-  const handleClick = () => setCount(count + 1)
+  const handleIncreaseClick = () => setCount(count + 1)
+  const handleDecreaseClick = () => setCount(count - 1)
+  const handleResetClick = () => setCount(0)
 
   return (
     <div>
-      <button onClick={handleClick}>Increase</button>
+      <button onClick={handleIncreaseClick}>Increase</button>
+      <button onClick={handleDecreaseClick}>Decrease</button>
+      <button onClick={handleResetClick}>Reset</button>
       <h2>{count}</h2>
     </div>
   );
