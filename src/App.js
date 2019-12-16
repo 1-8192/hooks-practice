@@ -19,11 +19,11 @@ function App() {
         <button onClick={()=>{setVisible(!visible)}}>
           Show/Hide useEffect Counter
         </button>
-        {/* <ComponentClass />
+        <ComponentClass />
         <ClickCounter />
-        <ObjectState /> */}
-        { visible && <ClickCounterUseEffect /> }
-        <ContextButton />
+        <ObjectState />
+        {/* { visible && <ClickCounterUseEffect /> }
+        <ContextButton /> */}
       </div>
     </NameContext.Provider>
   );
