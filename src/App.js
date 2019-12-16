@@ -5,6 +5,7 @@ import ObjectState from './ObjectState'
 import ComponentClass from './ComponentClass'
 import ClickCounterUseEffect from './ClickCounterUseEffect'
 import ContextButton from './ContextButton'
+import CustomHookPractice from './CustomHookPractice'
 
 function App() {
   
@@ -16,14 +17,15 @@ function App() {
   return (
     <NameContext.Provider value={name}>
       <div>
-        <button onClick={()=>{setVisible(!visible)}}>
-          Show/Hide useEffect Counter
+        {/* <button onClick={()=>{setVisible(!visible)}}>
+       unterUseEffect /> }
+        <ContextButton />   Show/Hide useEffect Counter
         </button>
         <ComponentClass />
         <ClickCounter />
         <ObjectState />
-        {/* { visible && <ClickCounterUseEffect /> }
-        <ContextButton /> */}
+        { visible && <ClickCo */}
+        <CustomHookPractice />
       </div>
     </NameContext.Provider>
   );
